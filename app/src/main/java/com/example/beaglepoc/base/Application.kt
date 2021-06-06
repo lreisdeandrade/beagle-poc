@@ -1,7 +1,7 @@
-package com.example.beaglepoc
+package com.example.beaglepoc.base
 
 import android.app.Application
-import com.example.beaglepoc.beagle.BeagleSetup
+import com.example.beaglepoc.beagle.config.BeagleSetup
 
 class Application : Application() {
 
