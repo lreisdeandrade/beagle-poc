@@ -8,12 +8,20 @@ import com.example.beaglepoc.R
 class AppDesignSystem : DesignSystem() {
 
     override fun buttonStyle(id: String) = when (id) {
-        "customButton" -> R.style.DefaultButton
+        "customButton" -> R.style.DefaultButton_CustomButton
         else -> R.style.DefaultButton
     }
 
     override fun image(id: String) = when (id) {
-        "vitao" -> R.drawable.vitao
+        "back" -> R.drawable.ic_back
+        "bag" -> R.drawable.ic_bag
+        "check" -> R.drawable.ic_check
+        "red_heart" -> R.drawable.ic_red_heart
+        "heart" -> R.drawable.ic_heart
+        "plus" -> R.drawable.ic_plus
+        "question" -> R.drawable.ic_question
+        "shopping" -> R.drawable.ic_shopping
+        "tshirt" -> R.drawable.tshirt
         else -> android.R.drawable.ic_menu_help
     }
 
