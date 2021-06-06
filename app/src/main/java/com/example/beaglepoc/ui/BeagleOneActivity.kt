@@ -1,12 +1,16 @@
 package com.example.beaglepoc.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import br.com.zup.beagle.android.action.Action
 import br.com.zup.beagle.android.annotation.BeagleComponent
 import br.com.zup.beagle.android.view.BeagleActivity
 import br.com.zup.beagle.android.view.ServerDrivenState
+import br.com.zup.beagle.android.widget.RootView
+import br.com.zup.beagle.annotation.RegisterAction
 import com.example.beaglepoc.R
 import kotlinx.android.synthetic.main.activity_beagle_one.*
 
@@ -39,5 +43,13 @@ class BeagleOneActivity : BeagleActivity() {
             throwable.localizedMessage,
             Toast.LENGTH_SHORT
         ).show()
+    }
+}
+
+@RegisterAction
+class ActionForBeagleTwo() : Action {
+    override fun execute(rootView: RootView, origin: View) {
+        val intent = Intent(rootView.getContext(), BeagleTwoActivity::class.java)
+        rootView.getContext().startActivity(intent)
     }
 }
